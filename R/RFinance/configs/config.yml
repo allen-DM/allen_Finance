@@ -1,0 +1,12 @@
+default:
+  trials: 6
+  dataset: "data-sampled.csv"
+
+production:
+  trials: 30
+  dataset: "data.csv"
+
+sql:
+  host: "127.0.0.1"
+  user: "root"
+  password: "toyo123"
