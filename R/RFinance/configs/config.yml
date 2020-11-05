@@ -1,6 +1,11 @@
 default:
   trials: 6
   dataset: "data-sampled.csv"
+  host: "172.105.216.149"
+  user: "root"
+  password: "toyo123"
+  dbname: "financial"
+
 
 production:
   trials: 30
