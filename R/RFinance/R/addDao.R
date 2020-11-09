@@ -1,4 +1,5 @@
 addDao=function(){
+
   config <- config::get(file = "configs/config.yml")
 
   addStockCode=function(stockNmae,stockCode){
@@ -7,7 +8,7 @@ addDao=function(){
                            host=config$host,
                            user = config$user,
                            password = config$password)
-      addStockCodeSQL=paste0("INSERT INTO `financial`.`stockcode` (`stockName`, `stockCode`) VALUES ('",stockNmae,"','",stockCode,"');")
+      addStockCodeSQL =paste0("INSERT INTO `financial`.`stockcode` (`stockName`, `stockCode`) VALUES ('",stockNmae,"','",stockCode,"');")
       rs <- dbSendQuery(con,addStockCodeSQL)
       #rs <-DBI::dbGetQuery(con,"show tables")
       #DBI::dbHasCompleted(rs)
@@ -40,8 +41,6 @@ addDao=function(){
   )
   return(addDao)
 }
-addDao=addDao()
 
-addDao$addStockCode("台灣大盤指數","^TWII")
 
 

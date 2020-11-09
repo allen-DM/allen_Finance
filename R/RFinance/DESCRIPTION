@@ -14,4 +14,5 @@ Imports:
     RMariaDB,
     jsonlite,
     httr,
-    config
+    config,
+    quantmod
